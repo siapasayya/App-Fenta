@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="110dp"
@@ -43,140 +44,145 @@
         app:cardCornerRadius="30dp"
         app:cardElevation="50dp">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="8dp"
-                android:fontFamily="sans-serif-condensed"
-                android:gravity="center"
-                android:text="SUHU UDARA"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                android:backgroundTint="#890e4f"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="10dp">
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/suhu_text_view"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="8dp"
                     android:fontFamily="sans-serif-condensed"
                     android:gravity="center"
-                    android:textColor="@color/white"
-                    android:textSize="24sp" />
+                    android:text="SUHU UDARA"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
 
-            </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="#890e4f"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="10dp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="8dp"
-                android:fontFamily="sans-serif-condensed"
-                android:gravity="center"
-                android:text="KADAR ALKOHOL"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
+                    <TextView
+                        android:id="@+id/suhu_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                android:backgroundTint="#890e4f"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="10dp">
+                </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/kadar_alkohol_text_view"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="8dp"
                     android:fontFamily="sans-serif-condensed"
                     android:gravity="center"
-                    android:textColor="@color/white"
-                    android:textSize="24sp" />
+                    android:text="KADAR ALKOHOL"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
 
-            </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="#890e4f"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="10dp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="8dp"
-                android:fontFamily="sans-serif-condensed"
-                android:gravity="center"
-                android:text="REAL TIME CONDITION"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
+                    <TextView
+                        android:id="@+id/kadar_alkohol_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                android:backgroundTint="#890e4f"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="10dp">
+                </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/realtime_condition_text_view"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="8dp"
                     android:fontFamily="sans-serif-condensed"
                     android:gravity="center"
-                    android:textColor="@color/white"
-                    android:textSize="24sp" />
+                    android:text="REAL TIME CONDITION"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
 
-            </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="#890e4f"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="10dp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="8dp"
-                android:fontFamily="sans-serif-condensed"
-                android:gravity="center"
-                android:text="LAST UPDATE"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
+                    <TextView
+                        android:id="@+id/realtime_condition_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="25dp"
-                android:backgroundTint="#890e4f"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="10dp">
+                </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/last_update_text_view"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="8dp"
                     android:fontFamily="sans-serif-condensed"
                     android:gravity="center"
-                    android:textColor="@color/white"
-                    android:textSize="24sp" />
+                    android:text="LAST UPDATE"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
 
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="#890e4f"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="10dp">
+
+                    <TextView
+                        android:id="@+id/last_update_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
     </androidx.cardview.widget.CardView>
 
 
