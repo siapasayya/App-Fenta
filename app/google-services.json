@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "196436660237",
+    "firebase_url": "https://fenta-app-2023-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "fenta-app-2023",
+    "storage_bucket": "fenta-app-2023.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:196436660237:android:170b8902666e64914a0544",
+        "android_client_info": {
+          "package_name": "com.example.suhu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "196436660237-u1bdokm2r1d53p7g788t2n21am7lau1b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_1vpxz7Brgc5s95U9HBg_oE1cJHIMq6Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "196436660237-u1bdokm2r1d53p7g788t2n21am7lau1b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
