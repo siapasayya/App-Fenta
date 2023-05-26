@@ -32,25 +32,26 @@ public class MainActivity extends AppCompatActivity {
         mRealtimeConditionTextView = findViewById(R.id.realtime_condition_text_view);
         mLastUpdateTextView = findViewById(R.id.last_update_text_view);
 
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("histori");
-        Query query = databaseReference.orderByChild("waktu").limitToLast(1);
-        query.addValueEventListener(new ValueEventListener() {
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("current");
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    String waktu = snapshot.child("waktu").getValue(String.class);
+//                Log.v("SNAP", String.valueOf(dataSnapshot));
+
+                    String waktu = dataSnapshot.child("waktu").getValue(String.class);
                     String[] waktuSplit = waktu.split(" ");
                     String tanggalJam = waktuSplit[1] + " / " + waktuSplit[2];
 
-                    double suhu = snapshot.child("suhu").getValue(Double.class);
-                    double alkohol = snapshot.child("alkohol").getValue(Double.class);
-                    String status = snapshot.child("status").getValue(String.class);
+                    double suhu = dataSnapshot.child("suhu").getValue(Double.class);
+                    double alkohol = dataSnapshot.child("alkohol").getValue(Double.class);
+                    String status = dataSnapshot.child("status").getValue(String.class);
 
                     mSuhuTextView.setText(String.format("%.1f °C", suhu));
                     mKadarAlkoholTextView.setText(String.format("%.1f %%", alkohol));
                     mRealtimeConditionTextView.setText(status);
                     mLastUpdateTextView.setText(tanggalJam);
-                }
+
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
